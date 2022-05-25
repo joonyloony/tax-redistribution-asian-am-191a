@@ -1,8 +1,8 @@
 body{
     display: grid;
-    grid-template-rows: 50px auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas: "header" "main_content" "footer";
-    background-color: rgb(255, 216, 253);
+    background-color: white;
     gap: 80px;
 }
 
@@ -12,30 +12,62 @@ header{
     align-self: center;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
-    color: #3d4748;
+    color: pink;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+
+    
 }
+header::after polygon {
+    fill: white;
+  }
 
 #footer{
     grid-area: footer;
 }
 
 .main{
+    background: linear-gradient(to bottom, pink 0%, white 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  text-align: center;
+  overflow: hidden;
     grid-area: main_content;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "main_map content";
     display: grid;
 }
 
+.chartsforreal{
+    display: grid;
+
+}
 #contents{
     grid-area: content;
     display: grid;
-    grid-template-rows: 1fr 3fr; 
-    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 200px 200px; 
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "survey" "buttonHome" 
 }
 
+#segundo{
+    justify-self: center;
+    margin-top: 100px;
+    margin-left: 400px;
+
+}
+#uno{
+    justify-self: center;
+    margin-top: 100px;
+    margin-left: 400px;
+
+}
+
 #the_map{
+    margin-left: 100px;
     height:80vh;
+    width: 100vh;
     grid-area: main_map;
 }
 
@@ -48,15 +80,68 @@ header{
 #surveyButton{
     padding: 15px 32px;
     margin: 10px;
-    background-color: #3d4748;
     cursor: pointer;
+    background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+    
 }
+
+
 
 /* css for button to get rid of the underline */
 #surveyButton a{
     text-decoration: none; 
-    color: white;
+    color: pink;
     font-family: 'Open Sans', sans-serif;
+}
+
+
+
+#placeForButtons{
+    grid-area: buttonHome;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.prettybuttons{
+    background-color: #e1ecf4;
+    border-radius: 3px;
+    border: 1px solid #7aa7c7;
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #39739d;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    margin-left: 50px;
 }
 
 #placeForButtons{
@@ -65,14 +150,28 @@ header{
     grid-template-columns: repeat(2, 1fr);
 }
 
+
 #pieChartTaxBracket{
-    grid-area: taxBracket;
+    grid-area: tax;
+    height: 10vh;
+    width: 10vh;
 }
 
 #pieChartNecessaryIncome{
-    grid-area: necessaryIncome;
+    grid-area: nec;
+    height: 100px;
+    width:100px;
+
 }
 
 #qualityOfLife{
-    grid-area: quality;
+    grid-area: qual;
+    height: 100px;
+    width:100px;
 }
+
+#chart{
+    height:10vh; 
+}
+
+

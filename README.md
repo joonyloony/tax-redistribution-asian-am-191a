@@ -1,5 +1,5 @@
 # Tax Evaders! Rough Draft
-  By Ananya and Jenny :)
+Jenny and Ananya
 
 
 
